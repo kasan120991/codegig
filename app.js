@@ -8,7 +8,7 @@ const db = require('./config/database');
 
 db.authenticate()
     .then(() => console.log('Database connected...'))
-    .catch(err => console.log('Error: ' + err))
+    .catch(err => console.log('Error: ' + err));
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // ------MIDDLEWARE - END------ //
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Index route
 app.get('/', (req, res) => res.render('index', { layout: 'landing'}));

@@ -17,6 +17,6 @@ const Gig = db.define('gig', {
     contact_email: {
         type: Sequelize.STRING
     }
-})
+});
 
 module.exports = Gig;
